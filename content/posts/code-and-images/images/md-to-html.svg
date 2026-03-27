@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 310" width="720" height="310">
+  <style>
+    .bg        { fill: #f0f2f4; }
+    .card      { fill: #ffffff; stroke: #e5e7eb; stroke-width: 1.5; }
+    .bar       { fill: #4f8ef7; }
+    .bar-text  { fill: #ffffff; font-family: ui-sans-serif, system-ui, sans-serif; font-size: 12px; font-weight: 700; }
+    .fm        { fill: #dbeafe; stroke: #93c5fd; stroke-width: 1; }
+    .bd        { fill: #f7f8fa; stroke: #e5e7eb; stroke-width: 1; }
+    .lbl       { fill: #1e40af; font-family: ui-sans-serif, system-ui, sans-serif; font-size: 10px; font-weight: 700; }
+    .code      { fill: #374151; font-family: ui-monospace, Menlo, 'Courier New', monospace; font-size: 10px; }
+    .arr       { stroke: #4f8ef7; stroke-width: 1.5; fill: none; }
+    .arr-head  { fill: #4f8ef7; }
+    .arr-lbl   { fill: #4f8ef7; font-family: ui-sans-serif, system-ui, sans-serif; font-size: 9px; font-weight: 600; text-anchor: middle; }
+
+    @media (prefers-color-scheme: dark) {
+      .bg       { fill: #1e1e1e; }
+      .card     { fill: #2a2a2a; stroke: #3a3a3a; }
+      .bar      { fill: #4f8ef7; }
+      .fm       { fill: #1e3a5f; stroke: #4f8ef7; stroke-width: 1; }
+      .bd       { fill: #2d2d2d; stroke: #3a3a3a; stroke-width: 1; }
+      .lbl      { fill: #93c5fd; }
+      .code     { fill: #d1d5db; }
+    }
+  </style>
+
+  <!-- canvas -->
+  <rect width="720" height="310" rx="8" class="bg"/>
+
+  <!-- ── LEFT CARD (post.md) ───────────────────────── -->
+  <rect x="10" y="10" width="295" height="290" rx="6" class="card"/>
+
+  <!-- title bar -->
+  <rect x="10" y="10" width="295" height="30" rx="6" class="bar"/>
+  <rect x="10" y="28" width="295" height="12" class="bar"/>
+  <text x="24" y="30" class="bar-text">post.md</text>
+
+  <!-- frontmatter section -->
+  <rect x="18" y="48" width="279" height="118" rx="4" class="fm"/>
+  <text x="28" y="63"  class="lbl">--- YAML front matter</text>
+  <text x="28" y="80"  class="code">title: "My Post"</text>
+  <text x="28" y="96"  class="code">seo_title: "My Post"</text>
+  <text x="28" y="112" class="code">seo_description: "..."</text>
+  <text x="28" y="128" class="code">category: tutorial</text>
+  <text x="28" y="144" class="code">tags: [markdown, php]</text>
+  <text x="28" y="160" class="lbl">---</text>
+
+  <!-- markdown body section -->
+  <rect x="18" y="174" width="279" height="118" rx="4" class="bd"/>
+  <text x="28" y="189" class="lbl">Markdown body</text>
+  <text x="28" y="206" class="code"># Heading</text>
+  <text x="28" y="222" class="code">**Bold** and _italic_ text.</text>
+  <text x="28" y="238" class="code">- list item one</text>
+  <text x="28" y="254" class="code">- list item two</text>
+  <text x="28" y="270" class="code">![alt text](images/photo.jpg)</text>
+
+  <!-- ── RIGHT CARD (HTML) ─────────────────────────── -->
+  <rect x="415" y="10" width="295" height="290" rx="6" class="card"/>
+
+  <!-- title bar -->
+  <rect x="415" y="10" width="295" height="30" rx="6" class="bar"/>
+  <rect x="415" y="28" width="295" height="12" class="bar"/>
+  <text x="429" y="30" class="bar-text">Rendered HTML page</text>
+
+  <!-- head section -->
+  <rect x="423" y="48" width="279" height="118" rx="4" class="fm"/>
+  <text x="433" y="63"  class="lbl">&lt;head&gt;</text>
+  <text x="433" y="80"  class="code">&lt;title&gt;My Post&lt;/title&gt;</text>
+  <text x="433" y="96"  class="code">&lt;meta name="description"&gt;</text>
+  <text x="433" y="112" class="code">&lt;meta property="og:title"&gt;</text>
+  <text x="433" y="128" class="code">&lt;link rel="canonical"&gt;</text>
+  <text x="433" y="144" class="code">&lt;link rel="alternate"&gt; (RSS)</text>
+  <text x="433" y="160" class="lbl">&lt;/head&gt;</text>
+
+  <!-- body section -->
+  <rect x="423" y="174" width="279" height="118" rx="4" class="bd"/>
+  <text x="433" y="189" class="lbl">&lt;body&gt;</text>
+  <text x="433" y="206" class="code">&lt;nav&gt; site navigation &lt;/nav&gt;</text>
+  <text x="433" y="222" class="code">&lt;h1&gt;Heading&lt;/h1&gt;</text>
+  <text x="433" y="238" class="code">&lt;p&gt;&lt;strong&gt;Bold&lt;/strong&gt; and ...&lt;/p&gt;</text>
+  <text x="433" y="254" class="code">&lt;ul&gt;&lt;li&gt;list item one&lt;/li&gt;...&lt;/ul&gt;</text>
+  <text x="433" y="270" class="code">&lt;img src="..." alt="alt text"&gt;</text>
+
+  <!-- ── ARROWS ────────────────────────────────────── -->
+
+  <!-- arrow 1: frontmatter → head (midpoint y=107) -->
+  <line x1="299" y1="107" x2="409" y2="107" class="arr"/>
+  <polygon points="409,103 417,107 409,111" class="arr-head"/>
+  <text x="358" y="100" class="arr-lbl">front matter</text>
+  <text x="358" y="120" class="arr-lbl">→ &lt;head&gt;</text>
+
+  <!-- arrow 2: markdown body → body (midpoint y=233) -->
+  <line x1="299" y1="233" x2="409" y2="233" class="arr"/>
+  <polygon points="409,229 417,233 409,237" class="arr-head"/>
+  <text x="358" y="226" class="arr-lbl">Markdown body</text>
+  <text x="358" y="246" class="arr-lbl">→ &lt;body&gt;</text>
+</svg>

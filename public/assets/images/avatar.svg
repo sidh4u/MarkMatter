@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <style>
+    .bg    { fill: #e5e7eb; }
+    .cloth { fill: #64748b; }
+    .neck  { fill: #b8bec8; }
+    .skin  { fill: #cbd0d9; }
+    .hair  { fill: #4b5563; }
+    .ear-i { fill: #b0b8c4; }
+    .eye-w { fill: #f1f3f5; }
+    .iris  { fill: #6b7280; }
+    .pupil { fill: #1e2530; }
+    .brow  { fill: none; stroke: #374151; stroke-width: 3; stroke-linecap: round; }
+    .nose  { fill: none; stroke: #9ca3af; stroke-width: 1.5; stroke-linecap: round; }
+    .lip-u { fill: none; stroke: #8d949e; stroke-width: 1.5; stroke-linecap: round; }
+    .lip-l { fill: none; stroke: #a8b0bc; stroke-width: 2.5; stroke-linecap: round; }
+    @media (prefers-color-scheme: dark) {
+      .bg    { fill: #2d2d2d; }
+      .cloth { fill: #334155; }
+      .neck  { fill: #4b5563; }
+      .skin  { fill: #6b7280; }
+      .hair  { fill: #1f2937; }
+      .ear-i { fill: #374151; }
+      .eye-w { fill: #9ca3af; }
+      .iris  { fill: #374151; }
+      .pupil { fill: #0f172a; }
+      .brow  { stroke: #111827; }
+      .nose  { stroke: #374151; }
+      .lip-u { stroke: #374151; }
+      .lip-l { stroke: #4b5563; }
+    }
+  </style>
+
+  <!-- Background -->
+  <rect width="200" height="200" rx="20" class="bg"/>
+
+  <!-- Shirt and V-collar -->
+  <path d="M18 200 Q48 160 100 156 Q152 160 182 200 Z" class="cloth"/>
+  <path d="M87 156 L100 173 L113 156 Z" class="bg"/>
+
+  <!-- Neck -->
+  <rect x="88" y="143" width="24" height="18" rx="3" class="neck"/>
+
+  <!-- Head — slightly wider at jaw for a masculine silhouette -->
+  <path d="M53 94 C53 46 147 46 147 94 C147 128 140 147 100 154 C60 147 53 128 53 94 Z" class="skin"/>
+
+  <!-- Left ear -->
+  <ellipse cx="51" cy="102" rx="9" ry="12" class="skin"/>
+  <ellipse cx="52" cy="102" rx="5" ry="7" class="ear-i"/>
+
+  <!-- Right ear -->
+  <ellipse cx="149" cy="102" rx="9" ry="12" class="skin"/>
+  <ellipse cx="148" cy="102" rx="5" ry="7" class="ear-i"/>
+
+  <!-- Hair — short, natural, covers forehead and tapers at sides -->
+  <path d="M53 94 C53 46 147 46 147 94 C143 62 130 47 100 44 C70 47 57 62 53 94 Z" class="hair"/>
+  <path d="M53 94 C53 80 54 68 57 60 C55 72 54 84 56 97 Z" class="hair"/>
+  <path d="M147 94 C147 80 146 68 143 60 C145 72 146 84 144 97 Z" class="hair"/>
+
+  <!-- Left eyebrow — slight arch, thicker line -->
+  <path d="M64 83 Q79 77 93 82" class="brow"/>
+  <!-- Right eyebrow -->
+  <path d="M107 82 Q121 77 136 83" class="brow"/>
+
+  <!-- Left eye -->
+  <ellipse cx="79" cy="95" rx="13" ry="9" class="eye-w"/>
+  <circle cx="79" cy="95" r="6.5" class="iris"/>
+  <circle cx="79" cy="95" r="3.5" class="pupil"/>
+  <circle cx="81" cy="92" r="1.8" fill="white" opacity="0.7"/>
+
+  <!-- Right eye -->
+  <ellipse cx="121" cy="95" rx="13" ry="9" class="eye-w"/>
+  <circle cx="121" cy="95" r="6.5" class="iris"/>
+  <circle cx="121" cy="95" r="3.5" class="pupil"/>
+  <circle cx="123" cy="92" r="1.8" fill="white" opacity="0.7"/>
+
+  <!-- Nose bridge and nostrils -->
+  <path d="M100 106 Q96 119 91 124 M100 106 Q104 119 109 124" class="nose"/>
+  <path d="M89 124 Q95 128 100 126 Q105 128 111 124" class="nose"/>
+
+  <!-- Upper lip (Cupid's bow) -->
+  <path d="M85 138 Q93 133 100 135 Q107 133 115 138" class="lip-u"/>
+  <!-- Lower lip -->
+  <path d="M85 138 Q100 147 115 138" class="lip-l"/>
+</svg>

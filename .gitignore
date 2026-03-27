@@ -1,0 +1,16 @@
+# Dependencies
+/vendor/
+
+# composer.json and composer.lock are both committed.
+# vendor/ is ignored — run `composer install` to regenerate it.
+
+# Local config overrides
+.env
+
+# macOS
+.DS_Store
+
+# IDE
+.idea/
+.vscode/
+*.swp
